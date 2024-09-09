@@ -90,7 +90,7 @@ function Signup() {
                             />
                             <button
                             type='submit'
-                            className='w-full'
+                            className='w-full bg-[#16423C] h-12 rounded-xl text-white hover:bg-[#2a6f66]'
                             >Sign Up</button>
                     </div>
 

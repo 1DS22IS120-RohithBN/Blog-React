@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import service from '../../appwrite/configuration';
 import Container from '../container/Container';
 import PostCard from '../PostCard';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [posts, setPost] = useState([]);
@@ -28,7 +29,12 @@ function Home() {
               </div>
             ))
           ) : (
-            <p>No posts available</p> // Optional: Handle empty state
+            <div className='flex flex-col ml-28'>
+            <p className='text-4xl text-center ml-96 mt-16'>No posts available</p>
+            <Link to='/login'>
+            <p className='mt-16 text-[#16423C] ml-96 text-3xl'><u>Click here to get started</u></p></Link>
+            
+            </div> // Optional: Handle empty state
           )}
         </div>
       </Container>

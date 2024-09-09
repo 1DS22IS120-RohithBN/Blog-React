@@ -27,10 +27,10 @@ authservice.getCurrentUser()
 
 
 return (!loading)?(
-  <div className='min-h-screen flex flex-wrap content-between bg-slate-500'>
+  <div className='min-h-screen flex flex-wrap content-between bg-[#6A9C89] '>
     <div className='w-full block'>
     <Header />
-    POSTS:<Outlet/>
+    <Outlet/>
     <Footer/>
     </div>
   </div>

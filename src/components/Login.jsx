@@ -32,7 +32,7 @@ function Login() {
 
     return (
         <div className='flex items-center justify-center w-full'>
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg bg-[#E9EFEC] rounded-xl p-10 border border-black/10`}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
@@ -52,6 +52,8 @@ function Login() {
                             label="Email"
                             placeholder="Enter your email"
                             type="email"
+                            className="hover:outline-black"
+
                             {...register("email", {
                                 required: true,
                                 validate: {
@@ -63,6 +65,7 @@ function Login() {
                             label="Password"
                             placeholder="Enter your password"
                             type="password"
+                            className="hover:outline-black"
                             {...register("password", {
                                 required: true,
                                 minLength: {
@@ -71,7 +74,7 @@ function Login() {
                                 }
                             })}
                         />
-                        <button type='submit' className='w-full'>Sign in</button>
+                        <button type='submit' className='w-full bg-[#16423C] h-12 rounded-xl text-white hover:bg-[#2a6f66]'>Sign in</button>
                     </div>
                 </form>
             </div>

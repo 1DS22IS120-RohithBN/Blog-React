@@ -85,17 +85,17 @@ export default function PostForm({ post }) {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+            <div className="w-2/3 px-10">
                 <Input
                     label="Title:"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 shadow-sm shadow-black"
                     {...register("title", { required: true })}
                 />
                 <Input
                     label="Slug:"
                     placeholder="Slug"
-                    className="mb-4"
+                    className="mb-4 shadow-sm shadow-black"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
@@ -103,11 +103,11 @@ export default function PostForm({ post }) {
                 />
                 <RTE label="Content:" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-1/3 px-3">
                 <Input
                     label="Featured Image:"
                     type="file"
-                    className="mb-4"
+                    className="mb-4 shadow-sm shadow-black block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer " 
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image")}
                 />
@@ -123,10 +123,10 @@ export default function PostForm({ post }) {
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
-                    className="mb-4"
+                    className="mb-4 bg-[#E9EFEC]"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-[#16423C]" : "bg-[#16423C] hover:bg-[#C4DAD2] shadow-md shadow-[#16423C] hover:text-black"} className="w-full">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

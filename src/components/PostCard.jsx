@@ -7,10 +7,10 @@ function PostCard({ $id, title, featuredImage }) {
 
   return (
     <Link to={`/post/${$id}`}>
-      <div className="w-full bg-gray-100 p-4 rounded-xl">
+      <div className="w-full hover:p-2 bg-[#e4f9ef] p-3 rounded-xl shadow-md shadow-slate-600 border-slate-800">
         <div className='w-full justify-center mb-4'>
           {filePreviewUrl ? (
-            <img src={filePreviewUrl} alt={title} className='rounded-xl' />
+            <img src={filePreviewUrl} alt={title} className='rounded-xl bg-contain h-32 w-52 ml-9 mt-2 ' />
           ) : (
             <div className='bg-gray-300 rounded-xl w-full h-48 flex items-center justify-center'>
               <span>No Image</span>
